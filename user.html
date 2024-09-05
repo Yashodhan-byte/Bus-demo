@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f7fa;
+    }
+
+    .navbar {
+      overflow-x: auto;
+      background-color: #333;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .navbar a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .form-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: antiquewhite;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="number"], input[type="email"], input[type="date"] {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 30px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="user.html">User registration</a>
+    <a href="employee-registration.html" class="active">Staff registration</a>
+    <a href="Our Buses.html">Our buses</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div class="form-container">
+    <h1>Employee Registration Form</h1>
+    <form id="myForm">
+      <label for="employeeId">Employee ID:</label>
+      <input type="text" id="employeeId" name="employeeId"><br><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br><br>
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department"><br><br>
+      <label for="designation">Designation:</label>
+      <input type="text" id="designation" name="designation"><br><br>
+      <label for="busRoute">Bus Route:</label>
+      <input type="text" id="busRoute" name="busRoute"><br><br>
+      <label for="busTimings">Bus Timings:</label>
+      <input type="text" id="busTimings" name="busTimings" placeholder="e.g., 9:00 AM - 5:00 PM"><br><br>
+      <label for="totalHours">Total Hours:</label>
+      <input type="number" id="totalHours" name="totalHours"><br><br>
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const employeeId = document.getElementById('employeeId').value;
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const dob = document.getElementById('dob').value;
+      const department = document.getElementById('department').value;
+      const designation = document.getElementById('designation').value;
+      const busRoute = document.getElementById('busRoute').value;
+      const busTimings = document.getElementById('busTimings').value;
+      const totalHours = document.getElementById('totalHours').value;
+
+      if (employeeId && name && email && dob && department && designation && busRoute && busTimings && totalHours) {
+        window.location.href = 'PROJ1.html';
+      } else {
+        alert('Please fill all fields!');
+      }
+    });
+  </script>
+</body>
+</html>
